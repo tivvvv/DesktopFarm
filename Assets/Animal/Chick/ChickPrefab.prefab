@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7833604490654799664}
   - component: {fileID: 3501238505628942588}
   - component: {fileID: 139249521155095145}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ChickPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
