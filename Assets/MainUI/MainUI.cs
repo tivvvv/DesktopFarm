@@ -7,8 +7,15 @@ public class MainUI : MonoBehaviour
 
     public TextMeshProUGUI moneyText;
 
+    public TextMeshProUGUI animalText;
+
+    public int chickNum = 0;
+
+    public int chickenNum = 0;
+
     private void Update()
     {
         moneyText.text = money.ToString();
+        animalText.text = (chickNum + chickenNum).ToString();
     }
 }
