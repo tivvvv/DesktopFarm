@@ -16,16 +16,18 @@ public class AnimalAI : MonoBehaviour
     // 下蛋计时器
     public float eggTimer = 0;
     // 下蛋周期
-    public float eggPeriod = 20;
+    public float eggPeriod = 5;
 
     private Animator ani;
     private Rigidbody2D rb;
+    private Transform Eggs;
 
     void Start()
     {
         period = 3;
         ani = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        Eggs = GameObject.Find("Main Scene").transform.Find("Eggs");
     }
 
     void FixedUpdate()
@@ -65,9 +67,11 @@ public class AnimalAI : MonoBehaviour
         }
 
         eggTimer += Time.fixedDeltaTime;
-        if (eggTimer >= eggPeriod) {
+        if (eggTimer >= eggPeriod)
+        {
             eggTimer = 0;
-            Instantiate
+            GameObject eggObj = Instantiate(egg, Eggs);
+            eggObj.transform.position = transform.position;
         }
     }
 }
