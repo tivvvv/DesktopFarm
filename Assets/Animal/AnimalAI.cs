@@ -16,7 +16,7 @@ public class AnimalAI : MonoBehaviour
     // 下蛋计时器
     public float eggTimer = 0;
     // 下蛋周期
-    public float eggPeriod = 5;
+    public float eggPeriod = 2;
 
     private Animator ani;
     private Rigidbody2D rb;

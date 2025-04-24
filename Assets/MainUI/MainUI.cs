@@ -1,16 +1,14 @@
+using TMPro;
 using UnityEngine;
 
 public class MainUI : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public int money = 0;
 
-    // Update is called once per frame
-    void Update()
+    public TextMeshProUGUI moneyText;
+
+    private void Update()
     {
-        
+        moneyText.text = money.ToString();
     }
 }
