@@ -6,26 +6,33 @@ public class AnimalAI : MonoBehaviour
     public float timer = 0;
     // 是否闲置
     public bool isIdle = true;
-    // 状态持续时间
-    public float ttl;
+    // 状态周期
+    public float period;
     // 移动速度
     public float speed;
+
+    // 鸡蛋
+    public GameObject egg;
+    // 下蛋计时器
+    public float eggTimer = 0;
+    // 下蛋周期
+    public float eggPeriod = 20;
 
     private Animator ani;
     private Rigidbody2D rb;
 
     void Start()
     {
-        ttl = 3;
+        period = 3;
         ani = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        timer += Time.deltaTime;
-        ttl = Random.Range(1, 10);
-        if (timer >= ttl)
+        timer += Time.fixedDeltaTime;
+        period = Random.Range(1, 10);
+        if (timer >= period)
         {
             timer = 0;
             isIdle = !isIdle;
@@ -55,6 +62,12 @@ public class AnimalAI : MonoBehaviour
             {
                 rb.linearVelocity = new Vector2(speed, 0);
             }
+        }
+
+        eggTimer += Time.fixedDeltaTime;
+        if (eggTimer >= eggPeriod) {
+            eggTimer = 0;
+            Instantiate
         }
     }
 }
