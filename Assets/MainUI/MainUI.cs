@@ -69,11 +69,10 @@ public class MainUI : MonoBehaviour
         }
 
         money -= 50;
-        GameObject chickObj = Instantiate(chick, Animals);
-        float x = Random.Range(-2.5F, 0.7F);
-        chickObj.transform.localPosition = new Vector3(x, 2, 0);
+        CreateChick();
         chickNum++;
     }
+
     public void BuyChicken()
     {
         if (money < 100)
@@ -81,10 +80,22 @@ public class MainUI : MonoBehaviour
             return;
         }
         money -= 100;
+        CreateChicken();
+        chickenNum++;
+    }
+
+    private void CreateChicken()
+    {
         GameObject chickenObj = Instantiate(chicken, Animals);
         float x = Random.Range(-2.5F, 0.7F);
         chickenObj.transform.localPosition = new Vector3(x, 2, 0);
-        chickenNum++;
+    }
+
+    private void CreateChick()
+    {
+        GameObject chickObj = Instantiate(chick, Animals);
+        float x = Random.Range(-2.5F, 0.7F);
+        chickObj.transform.localPosition = new Vector3(x, 2, 0);
     }
 
     public void Hide()
@@ -131,11 +142,38 @@ public class MainUI : MonoBehaviour
 
     public void Load()
     {
+        money = PlayerPrefs.GetInt("Money", 0);
+        chickenNum = PlayerPrefs.GetInt("ChickenNum", 1);
+        chickNum = PlayerPrefs.GetInt("ChickNum", 1);
 
+        if (chickenNum > 1)
+        {
+            for (int i = 0; i < chickenNum - 1; i++)
+            {
+                CreateChicken();
+            }
+        }
+
+        if (chickNum > 1)
+        {
+            for (int i = 0; i < chickNum - 1; i++)
+            {
+                CreateChick();
+            }
+        }
     }
 
     public void ClearSave()
     {
-
+        money = 0;
+        chickNum = 1;
+        chickenNum = 1;
+        foreach (GameObject item in Animals)
+        {
+            Destroy(item);
+        }
+        CreateChicken();
+        CreateChick();
+        Save();
     }
 }
