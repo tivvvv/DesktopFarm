@@ -4891,6 +4891,12 @@ MonoBehaviour:
   chick: {fileID: 3059422108657754754, guid: f17a2f292cf8340199b43f085d8b0fed, type: 3}
   chicken: {fileID: 8857988525067686102, guid: c6713d5458e7248709dcc070209b28d6, type: 3}
   ExitUI: {fileID: 1334482791}
+  hiddenObjects:
+  - {fileID: 805778771}
+  - {fileID: 1677699838}
+  - {fileID: 1841541568}
+  - {fileID: 1416975555}
+  MainScene: {fileID: 805778771}
 --- !u!1 &1416975555
 GameObject:
   m_ObjectHideFlags: 0

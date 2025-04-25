@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -22,6 +23,10 @@ public class MainUI : MonoBehaviour
     public GameObject chicken;
 
     public GameObject ExitUI;
+
+    public List<GameObject> hiddenObjects;
+
+    public GameObject MainScene;
 
     private void Update()
     {
@@ -67,7 +72,20 @@ public class MainUI : MonoBehaviour
 
     public void Hide()
     {
-
+        if (MainScene.activeSelf)
+        {
+            foreach (GameObject item in hiddenObjects)
+            {
+                item.SetActive(false);
+            }
+        }
+        else
+        {
+            foreach (GameObject item in hiddenObjects)
+            {
+                item.SetActive(true);
+            }
+        }
     }
 
     public void Quit()
