@@ -14,6 +14,8 @@ public class MainUI : MonoBehaviour
 
     public int chickenNum = 0;
 
+    public float saveTimer = 0;
+
     public Transform Animals;
 
     public GameObject StoreUI;
@@ -28,10 +30,25 @@ public class MainUI : MonoBehaviour
 
     public GameObject MainScene;
 
+    private void Start()
+    {
+        Load();
+    }
+
     private void Update()
     {
         moneyText.text = money.ToString();
         animalText.text = (chickNum + chickenNum).ToString();
+    }
+
+    private void FixedUpdate()
+    {
+        saveTimer += Time.fixedDeltaTime;
+        if (saveTimer >= 30)
+        {
+            saveTimer = 0;
+            Save();
+        }
     }
 
     public void CloseStore()
@@ -90,6 +107,7 @@ public class MainUI : MonoBehaviour
 
     public void Quit()
     {
+        Save();
         ExitUI.SetActive(true);
     }
 
@@ -101,5 +119,23 @@ public class MainUI : MonoBehaviour
     public void QuitNo()
     {
         ExitUI.SetActive(false);
+    }
+
+    public void Save()
+    {
+        PlayerPrefs.SetInt("Money", money);
+        PlayerPrefs.SetInt("ChickenNum", chickenNum);
+        PlayerPrefs.SetInt("ChickNum", chickNum);
+        PlayerPrefs.Save();
+    }
+
+    public void Load()
+    {
+
+    }
+
+    public void ClearSave()
+    {
+
     }
 }
