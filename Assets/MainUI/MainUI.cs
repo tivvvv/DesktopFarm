@@ -21,6 +21,8 @@ public class MainUI : MonoBehaviour
 
     public GameObject chicken;
 
+    public GameObject ExitUI;
+
     private void Update()
     {
         moneyText.text = money.ToString();
@@ -61,5 +63,25 @@ public class MainUI : MonoBehaviour
         float x = Random.Range(-2.5F, 0.7F);
         chickenObj.transform.localPosition = new Vector3(x, 2, 0);
         chickenNum++;
+    }
+
+    public void Hide()
+    {
+
+    }
+
+    public void Quit()
+    {
+        ExitUI.SetActive(true);
+    }
+
+    public void QuitYes()
+    {
+        Application.Quit();
+    }
+
+    public void QuitNo()
+    {
+        ExitUI.SetActive(false);
     }
 }
