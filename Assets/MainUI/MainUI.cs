@@ -30,6 +30,8 @@ public class MainUI : MonoBehaviour
 
     public GameObject MainScene;
 
+    public GameObject ClearSaveUI;
+
     private void Start()
     {
         Load();
@@ -165,15 +167,26 @@ public class MainUI : MonoBehaviour
 
     public void ClearSave()
     {
+        ClearSaveUI.SetActive(true);
+    }
+
+    public void ClearSaveYes()
+    {
+        ClearSaveUI.SetActive(false);
         money = 0;
         chickNum = 1;
         chickenNum = 1;
-        foreach (GameObject item in Animals)
+        foreach (Transform item in Animals)
         {
-            Destroy(item);
+            Destroy(item.gameObject);
         }
         CreateChicken();
         CreateChick();
         Save();
+    }
+
+    public void ClearSaveNo()
+    {
+        ClearSaveUI.SetActive(false);
     }
 }
