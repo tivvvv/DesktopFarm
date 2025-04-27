@@ -189,4 +189,16 @@ public class MainUI : MonoBehaviour
     {
         ClearSaveUI.SetActive(false);
     }
+
+    public void Zoom()
+    {
+        if (MainScene.transform.localScale.x < 1)
+        {
+            MainScene.transform.localScale = new Vector3(1, 1, 1);
+        }
+        else
+        {
+            MainScene.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+        }
+    }
 }
