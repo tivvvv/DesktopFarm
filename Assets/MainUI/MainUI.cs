@@ -14,6 +14,10 @@ public class MainUI : MonoBehaviour
 
     public int chickenNum = 0;
 
+    public int calfNum = 0;
+
+    public int cowNum = 0;
+
     public float saveTimer = 0;
 
     public Transform Animals;
@@ -23,6 +27,10 @@ public class MainUI : MonoBehaviour
     public GameObject chick;
 
     public GameObject chicken;
+
+    public GameObject calf;
+
+    public GameObject cow;
 
     public GameObject ExitUI;
 
@@ -86,6 +94,28 @@ public class MainUI : MonoBehaviour
         chickenNum++;
     }
 
+    public void BuyCalf()
+    {
+        if (money < 300)
+        {
+            return;
+        }
+        money -= 300;
+        CreateCalf();
+        calfNum++;
+    }
+
+    public void BuyCow()
+    {
+        if (money < 500)
+        {
+            return;
+        }
+        money -= 500;
+        CreateCow();
+        cowNum++;
+    }
+
     private void CreateChicken()
     {
         GameObject chickenObj = Instantiate(chicken, Animals);
@@ -98,6 +128,20 @@ public class MainUI : MonoBehaviour
         GameObject chickObj = Instantiate(chick, Animals);
         float x = Random.Range(-2.5F, 0.7F);
         chickObj.transform.localPosition = new Vector3(x, 2, 0);
+    }
+
+    private void CreateCalf()
+    {
+        GameObject calfObj = Instantiate(calf, Animals);
+        float x = Random.Range(-2.5F, 0.7F);
+        calfObj.transform.localPosition = new Vector3(x, 2, 0);
+    }
+
+    private void CreateCow()
+    {
+        GameObject cowObj = Instantiate(cow, Animals);
+        float x = Random.Range(-2.5F, 0.7F);
+        cowObj.transform.localPosition = new Vector3(x, 2, 0);
     }
 
     public void Hide()
