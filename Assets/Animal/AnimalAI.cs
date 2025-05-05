@@ -24,7 +24,7 @@ public class AnimalAI : MonoBehaviour
 
     void Start()
     {
-        period = 3;
+        period = 5;
         ani = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         Products = GameObject.Find("Main Scene").transform.Find("Products");
@@ -33,7 +33,7 @@ public class AnimalAI : MonoBehaviour
     void FixedUpdate()
     {
         timer += Time.fixedDeltaTime;
-        period = Random.Range(1, 10);
+        period = Random.Range(2, 12);
         if (timer >= period)
         {
             timer = 0;

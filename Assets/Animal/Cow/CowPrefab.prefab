@@ -195,4 +195,4 @@ MonoBehaviour:
   speed: 0.2
   product: {fileID: 1391996039890642487, guid: 953d50f9e010145508417c2cdd813639, type: 3}
   productTimer: 0
-  productPeriod: 2
+  productPeriod: 60

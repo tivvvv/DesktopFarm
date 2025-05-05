@@ -183,6 +183,8 @@ public class MainUI : MonoBehaviour
         PlayerPrefs.SetInt("Money", money);
         PlayerPrefs.SetInt("ChickenNum", chickenNum);
         PlayerPrefs.SetInt("ChickNum", chickNum);
+        PlayerPrefs.SetInt("CalfNum", calfNum);
+        PlayerPrefs.SetInt("CowNum", cowNum);
         PlayerPrefs.Save();
     }
 
@@ -191,6 +193,8 @@ public class MainUI : MonoBehaviour
         money = PlayerPrefs.GetInt("Money", 0);
         chickenNum = PlayerPrefs.GetInt("ChickenNum", 1);
         chickNum = PlayerPrefs.GetInt("ChickNum", 1);
+        calfNum = PlayerPrefs.GetInt("CalfNum", 0);
+        cowNum = PlayerPrefs.GetInt("CowNum", 0);
 
         if (chickenNum > 1)
         {
@@ -207,6 +211,22 @@ public class MainUI : MonoBehaviour
                 CreateChick();
             }
         }
+
+        if (calfNum > 0)
+        {
+            for (int i = 0; i < calfNum; i++)
+            {
+                CreateCalf();
+            }
+        }
+
+        if (cowNum > 0)
+        {
+            for (int i = 0; i < cowNum; i++)
+            {
+                CreateCow();
+            }
+        }
     }
 
     public void ClearSave()
@@ -220,6 +240,8 @@ public class MainUI : MonoBehaviour
         money = 0;
         chickNum = 1;
         chickenNum = 1;
+        calfNum = 0;
+        cowNum = 0;
         foreach (Transform item in Animals)
         {
             Destroy(item.gameObject);
