@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4713087069251987692}
   - component: {fileID: 5473664634843959023}
   - component: {fileID: 1435274651772195625}
+  - component: {fileID: -2741992410633682936}
   m_Layer: 6
   m_Name: CowPrefab
   m_TagString: Untagged
@@ -176,3 +177,22 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0064959526, y: 0.014074683}
   m_Size: {x: 0.18575096, y: 0.18575096}
   m_Direction: 0
+--- !u!114 &-2741992410633682936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778997826755580775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 087e54e09bffc4e36b6ff4505d883a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  isIdle: 1
+  period: 0
+  speed: 0.1
+  egg: {fileID: 0}
+  eggTimer: 0
+  eggPeriod: 2

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 542621636074324315}
   - component: {fileID: 5667288078268162314}
   - component: {fileID: 3600799779403808559}
+  - component: {fileID: 9065209142683181029}
   m_Layer: 6
   m_Name: CalfPrefab
   m_TagString: Untagged
@@ -176,3 +177,22 @@ CapsuleCollider2D:
   m_Offset: {x: -0.008523226, y: 0.0002310276}
   m_Size: {x: 0.14477777, y: 0.14477777}
   m_Direction: 0
+--- !u!114 &9065209142683181029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352571347888071927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 087e54e09bffc4e36b6ff4505d883a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  isIdle: 1
+  period: 0
+  speed: 0.1
+  egg: {fileID: 0}
+  eggTimer: 0
+  eggPeriod: 2
