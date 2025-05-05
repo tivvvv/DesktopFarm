@@ -119,28 +119,28 @@ public class MainUI : MonoBehaviour
     private void CreateChicken()
     {
         GameObject chickenObj = Instantiate(chicken, Animals);
-        float x = Random.Range(-2.5F, 0.7F);
+        float x = Random.Range(-2.6F, 0.8F);
         chickenObj.transform.localPosition = new Vector3(x, 2, 0);
     }
 
     private void CreateChick()
     {
         GameObject chickObj = Instantiate(chick, Animals);
-        float x = Random.Range(-2.5F, 0.7F);
+        float x = Random.Range(-2.6F, 0.8F);
         chickObj.transform.localPosition = new Vector3(x, 2, 0);
     }
 
     private void CreateCalf()
     {
         GameObject calfObj = Instantiate(calf, Animals);
-        float x = Random.Range(-2.5F, 0.7F);
+        float x = Random.Range(-2.6F, 0.8F);
         calfObj.transform.localPosition = new Vector3(x, 2, 0);
     }
 
     private void CreateCow()
     {
         GameObject cowObj = Instantiate(cow, Animals);
-        float x = Random.Range(-2.5F, 0.7F);
+        float x = Random.Range(-2.6F, 0.8F);
         cowObj.transform.localPosition = new Vector3(x, 2, 0);
     }
 
