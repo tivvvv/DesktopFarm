@@ -74,4 +74,19 @@ public class AnimalAI : MonoBehaviour
             productObj.transform.position = transform.position;
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "LeftAirWall")
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+
+        if (collision.gameObject.name == "RightAirWall")
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+
+        }
+    }
+
 }
