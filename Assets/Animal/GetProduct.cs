@@ -1,17 +1,19 @@
 using UnityEngine;
 
-public class GetEgg : MonoBehaviour
+public class GetProduct : MonoBehaviour
 {
 
     public MainUI mainUI;
+
+    public int money = 10;
 
     void Start()
     {
         mainUI = GameObject.Find("MainUI").GetComponent<MainUI>();
     }
-    public void clickEgg()
+    public void ClickProduct()
     {
-        mainUI.money += 10;
+        mainUI.money += money;
         Destroy(gameObject);
     }
 }

@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainUI: {fileID: 0}
+  money: 10
 --- !u!114 &30780316186217351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,8 +136,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8675943034810063251}
-        m_TargetAssemblyTypeName: GetEgg, Assembly-CSharp
-        m_MethodName: clickEgg
+        m_TargetAssemblyTypeName: GetProduct, Assembly-CSharp
+        m_MethodName: ClickProduct
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -231,7 +232,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &2996934420665830965
 MonoBehaviour:
   m_ObjectHideFlags: 0
