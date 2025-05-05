@@ -192,7 +192,7 @@ MonoBehaviour:
   timer: 0
   isIdle: 1
   period: 0
-  speed: 0.5
+  speed: 0.6
   product: {fileID: 3181556543297169434, guid: 06190737c3ab7428d99eaa44f516752b, type: 3}
   productTimer: 0
   productPeriod: 90
