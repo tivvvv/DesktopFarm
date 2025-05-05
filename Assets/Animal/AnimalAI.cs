@@ -11,23 +11,23 @@ public class AnimalAI : MonoBehaviour
     // 移动速度
     public float speed;
 
-    // 鸡蛋
-    public GameObject egg;
-    // 下蛋计时器
-    public float eggTimer = 0;
-    // 下蛋周期
-    public float eggPeriod = 2;
+    // 生产物
+    public GameObject product;
+    // 生产计时器
+    public float productTimer = 0;
+    // 生产周期
+    public float productPeriod = 2;
 
     private Animator ani;
     private Rigidbody2D rb;
-    private Transform Eggs;
+    private Transform Products;
 
     void Start()
     {
         period = 3;
         ani = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        Eggs = GameObject.Find("Main Scene").transform.Find("Eggs");
+        Products = GameObject.Find("Main Scene").transform.Find("Products");
     }
 
     void FixedUpdate()
@@ -66,12 +66,12 @@ public class AnimalAI : MonoBehaviour
             }
         }
 
-        eggTimer += Time.fixedDeltaTime;
-        if (eggTimer >= eggPeriod)
+        productTimer += Time.fixedDeltaTime;
+        if (productTimer >= productPeriod)
         {
-            eggTimer = 0;
-            GameObject eggObj = Instantiate(egg, Eggs);
-            eggObj.transform.position = transform.position;
+            productTimer = 0;
+            GameObject productObj = Instantiate(product, Products);
+            productObj.transform.position = transform.position;
         }
     }
 }

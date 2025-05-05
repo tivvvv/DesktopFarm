@@ -1363,8 +1363,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2741992410633682936, guid: 5922c1cde69774b61a6f2f796d43a31e, type: 3}
       propertyPath: speed
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: -2741992410633682936, guid: 5922c1cde69774b61a6f2f796d43a31e, type: 3}
+      propertyPath: product
+      value: 
+      objectReference: {fileID: 1391996039890642487, guid: 953d50f9e010145508417c2cdd813639, type: 3}
     - target: {fileID: 1778997826755580775, guid: 5922c1cde69774b61a6f2f796d43a31e, type: 3}
       propertyPath: m_Name
       value: CowPrefab
@@ -2287,6 +2291,14 @@ PrefabInstance:
       propertyPath: speed
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3636807268996499891, guid: f17a2f292cf8340199b43f085d8b0fed, type: 3}
+      propertyPath: product
+      value: 
+      objectReference: {fileID: 3181556543297169434, guid: 06190737c3ab7428d99eaa44f516752b, type: 3}
+    - target: {fileID: 3636807268996499891, guid: f17a2f292cf8340199b43f085d8b0fed, type: 3}
+      propertyPath: productPeriod
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7833604490654799664, guid: f17a2f292cf8340199b43f085d8b0fed, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.202
@@ -2347,7 +2359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 596995277}
   m_Layer: 5
-  m_Name: Eggs
+  m_Name: Products
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2581,6 +2593,14 @@ PrefabInstance:
     - target: {fileID: 4200820383658314897, guid: c6713d5458e7248709dcc070209b28d6, type: 3}
       propertyPath: speed
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4200820383658314897, guid: c6713d5458e7248709dcc070209b28d6, type: 3}
+      propertyPath: product
+      value: 
+      objectReference: {fileID: 3181556543297169434, guid: 06190737c3ab7428d99eaa44f516752b, type: 3}
+    - target: {fileID: 4200820383658314897, guid: c6713d5458e7248709dcc070209b28d6, type: 3}
+      propertyPath: productPeriod
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8857988525067686102, guid: c6713d5458e7248709dcc070209b28d6, type: 3}
       propertyPath: m_Name
@@ -3286,8 +3306,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9065209142683181029, guid: 065e82a2eba3f4a238289b64017dba55, type: 3}
       propertyPath: speed
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 9065209142683181029, guid: 065e82a2eba3f4a238289b64017dba55, type: 3}
+      propertyPath: product
+      value: 
+      objectReference: {fileID: 1391996039890642487, guid: 953d50f9e010145508417c2cdd813639, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

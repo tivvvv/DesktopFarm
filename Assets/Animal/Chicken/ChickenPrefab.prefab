@@ -193,6 +193,6 @@ MonoBehaviour:
   isIdle: 1
   period: 0
   speed: 0.3
-  egg: {fileID: 3181556543297169434, guid: 06190737c3ab7428d99eaa44f516752b, type: 3}
-  eggTimer: 0
-  eggPeriod: 20
+  product: {fileID: 3181556543297169434, guid: 06190737c3ab7428d99eaa44f516752b, type: 3}
+  productTimer: 0
+  productPeriod: 30
