@@ -48,7 +48,7 @@ public class MainUI : MonoBehaviour
     private void Update()
     {
         moneyText.text = money.ToString();
-        animalText.text = (chickNum + chickenNum).ToString();
+        animalText.text = (chickNum + chickenNum + calfNum + cowNum).ToString();
     }
 
     private void FixedUpdate()
@@ -237,7 +237,7 @@ public class MainUI : MonoBehaviour
     public void ClearSaveYes()
     {
         ClearSaveUI.SetActive(false);
-        money = 0;
+        money = 100;
         chickNum = 1;
         chickenNum = 1;
         calfNum = 0;
