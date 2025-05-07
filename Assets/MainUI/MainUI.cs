@@ -40,9 +40,12 @@ public class MainUI : MonoBehaviour
 
     public GameObject ClearSaveUI;
 
+    private Transform Products;
+
     private void Start()
     {
         Load();
+        Products = GameObject.Find("Main Scene").transform.Find("Products");
     }
 
     private void Update()
@@ -266,5 +269,30 @@ public class MainUI : MonoBehaviour
         {
             MainScene.transform.localScale = new Vector3(0.5f, 0.5f, 1);
         }
+    }
+
+
+    public void CollectAll()
+    {
+        for (int i = 0; i < Products.childCount; i++)
+        {
+            GameObject product = Products.GetChild(i).gameObject;
+            money += GetProductValue(product.name);
+            Destroy(product);
+        }
+    }
+
+    private int GetProductValue(string productName)
+    {
+        Debug.Log(productName);
+        if (productName.Contains("Egg"))
+        {
+            return 10;
+        }
+        else if (productName.Contains("Milk"))
+        {
+            return 25;
+        }
+        return 0;
     }
 }

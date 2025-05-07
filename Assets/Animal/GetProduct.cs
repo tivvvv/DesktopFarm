@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GetProduct : MonoBehaviour
@@ -11,6 +12,7 @@ public class GetProduct : MonoBehaviour
     {
         mainUI = GameObject.Find("MainUI").GetComponent<MainUI>();
     }
+
     public void ClickProduct()
     {
         mainUI.money += money;

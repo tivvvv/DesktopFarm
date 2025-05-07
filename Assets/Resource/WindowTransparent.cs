@@ -10,6 +10,8 @@ public class WindowTransparent : MonoBehaviour
     [DllImport("user32.dll")]
     public static extern int MessageBox(IntPtr hWnd, string text, string caption, uint type);
 
+    public bool SetTop = false;
+
     // 定义一个结构来存储窗口边框的边距大小
     private struct MARGINS
     {
@@ -52,6 +54,8 @@ public class WindowTransparent : MonoBehaviour
     // 窗口插入位置(始终置顶)
     static readonly IntPtr HWND_TOPMOST = new IntPtr(-1);
 
+    static readonly IntPtr HWND_NOT_TOPMOST = new IntPtr(-2);
+
     // 设置颜色键的标志(用于透明度) 
     const uint LWA_COLORKEY = 0x00000001;
 
@@ -78,7 +82,13 @@ public class WindowTransparent : MonoBehaviour
         SetLayeredWindowAttributes(hWnd, 0, 0, LWA_COLORKEY);
  
         // 将窗口位置设置为始终置顶
-        SetWindowPos(hWnd, HWND_TOPMOST, 0, 0, 0, 0, 0);
+        if (SetTop) 
+        {
+            SetWindowPos(hWnd, HWND_TOPMOST, 0, 0, 0, 0, 0);
+        }
+        else {
+            SetWindowPos(hWnd, HWND_NOT_TOPMOST, 0, 0, 0, 0, 0);
+        }
 #endif
 
         // 允许应用在后台运行
